@@ -111,6 +111,8 @@
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\V1\TasksController.cs" />
+    <Compile Include="Controllers\V2\TasksController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -127,8 +129,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebApi2Book.Web.Api.Models\WebApi2Book.Web.Api.Models.csproj">
+      <Project>{3576e44e-862a-45e8-b9e5-9cb523221b9d}</Project>
+      <Name>WebApi2Book.Web.Api.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApi2Book.Web.Common\WebApi2Book.Web.Common.csproj">
+      <Project>{60245a32-b6bd-4d47-a6c7-c3f3d9610287}</Project>
+      <Name>WebApi2Book.Web.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
