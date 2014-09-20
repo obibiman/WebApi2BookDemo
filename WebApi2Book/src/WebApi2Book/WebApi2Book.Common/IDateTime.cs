@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace WebApi2Book.Common
 {
-    public class Class1
+    public interface IDateTime
     {
-    }
+        DateTime UtcNow { get; }
+    } 
 }
